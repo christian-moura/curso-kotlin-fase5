@@ -1,0 +1,14 @@
+version: '3'
+services:
+  postgres-autor:
+    image: 'postgres:9.6-alpine'
+    volumes:
+      - autor-volume:/var/lib/postgresql/data
+    ports:
+      - 5436:5432 # porta_maquia_host:porta_do_container_do_docker
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: autor
+volumes:
+  autor-volume:

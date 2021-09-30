@@ -1,0 +1,17 @@
+micronaut:
+  application:
+    name: primeiroProjetoMicronaut
+
+datasources:
+  default:
+    url: ${DB_URL:`jdbc:postgresql://localhost:5436/autor`}
+    driverClassName: org.postgresql.Driver
+    username: ${DB_USER:root}
+    password: ${DB_PASSWORD:root}
+
+jpa:
+  default:
+    properties:
+      hibernate:
+        hbm2ddl:
+          auto: update
